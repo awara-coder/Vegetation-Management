@@ -1,0 +1,44 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      position: relative;
+  }
+  </style>
+<script>
+    window.onload = function () {
+    var l=[]
+    {% for v in value %}
+    var a={{v}}
+    console.log(a);
+    l.push({y:a})
+    {% endfor %}
+var chart = new CanvasJS.Chart("chartContainer", {
+
+	animationEnabled: true,
+	theme: "light2",
+	title:{
+		text: "Relative Depth With Respect To Frames"
+	},
+	axisY:{
+		includeZero: false
+	},
+	data: [{
+		type: "line",
+		dataPoints: l
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body data-spy="scroll" data-target="chartContainer" data-offset="50">
+<div id="chartContainer" style="height: 500px; width: 100%;object-fit: contain;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

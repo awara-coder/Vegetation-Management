@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        nav{
+           background:#000050;
+           height:90px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-light"><br>
+  <ul class="navbar-nav mx-auto">
+    <li class="nav-item active">
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-expand-sm navbar-light"><br>
+  <ul class="navbar-nav mx-auto">
+    <li class="nav-item active text-light">
+      <h1>VEGETATION MANAGEMENT</h1>
+    </li>
+  </ul><br>
+</nav>
+<nav class="navbar navbar-expand-sm navbar-light"><br>
+  <ul class="navbar-nav ml-auto         ">
+    <li class="nav-item active text-primary">
+        <h3>#HackWithInfy</h3>
+    </li>
+  </ul>
+</nav>
+<br>
+<br>
+<div class="container">
+    <div class="row row-grid">
+  <div class="card" style="width:550px">
+    <div class="card-body">
+      <h4 class="card-title">Detect</h4>
+      <p class="card-text">Displays the relative depth of the Trees with respect to Wires</p>
+      <a href="{% url 'apple' %}" class="btn btn-primary">See Graph</a>
+    </div>
+  </div>
+  <div class="card" style="width:550px">
+    <div class="card-body">
+      <h4 class="card-title">Forecast</h4>
+      <p class="card-text">Displays the windspeed for the next seven days</p>
+      <a href="{% url 'banana'%}" class="btn btn-primary">See Details</a>
+    </div>
+
+  </div>
+</div>
+</div>
+</body>
+</html>
