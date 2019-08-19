@@ -40,5 +40,10 @@ chart.render();
 <body data-spy="scroll" data-target="chartContainer" data-offset="50">
 <div id="chartContainer" style="height: 500px; width: 100%;object-fit: contain;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+{% if flag %}
+<p>The tree height exceeds the threshold</p>
+{% else %}
+<p>The tree height is in threshold</p>
+{% endif%}
 </body>
 </html>

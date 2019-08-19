@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.views import View
 from django.urls import resolve
+import requests
 from django.shortcuts import render, redirect
 import pickle
-import requests
 from pprint import pprint
 # Create your views here.
 class basic_view(View):
@@ -15,13 +15,19 @@ class basic_view(View):
         )
 class detect_view(View):
     def get(self, request, *args, **kwargs):
-        file = open('real_output.pkl', 'rb')
+        file = open('real_output1.pkl', 'rb')
         data = pickle.load(file)
         values = [abs(x['depth']) for x in data]
-        print(values)
+        #print(values)
+        flag=False
+        for i in values:
+            if i>12000:
+                flag=True
+
+		
         return render(
             request,
-            template_name="maindetect.html",context={'value':values}
+            template_name="maindetect.html",context={'value':values,'flag':flag}
         )
 class weather_view(View):
     def get(self, request, *args, **kwargs):

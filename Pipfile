@@ -12,6 +12,10 @@ matplotlib = "*"
 opencv-python = "*"
 pyrealsense2 = "*"
 django = "*"
+rest-framework = "*"
+djangorestframework = "*"
+requests = "*"
+request = "*"
 
 [requires]
 python_version = "3.6"
