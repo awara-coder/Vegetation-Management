@@ -1,0 +1,8 @@
+# sample pickle file
+*.pkl
+
+# idea files
+.idea
+
+# vscode files
+.vscode
