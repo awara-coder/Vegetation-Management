@@ -23,11 +23,17 @@ class detect_view(View):
         for i in values:
             if i>12000:
                 flag=True
-
-		
+        x=list(set(values))
+        x.sort(reverse=True)
+        ans=[]
+        for i in range(len(x)):
+            if x[i]>12000 and x[i]<16000:
+                t=(x[i]-12000)//2000
+                if t not in ans:
+                    ans.append(t)
         return render(
             request,
-            template_name="maindetect.html",context={'value':values,'flag':flag}
+            template_name="maindetect.html",context={'value':values,'flag':flag,'tree':ans}
         )
 class weather_view(View):
     def get(self, request, *args, **kwargs):

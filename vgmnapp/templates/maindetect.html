@@ -8,6 +8,9 @@
   body {
       position: relative;
   }
+  h4{
+      text-color:red;
+  }
   </style>
 <script>
     window.onload = function () {
@@ -40,10 +43,21 @@ chart.render();
 <body data-spy="scroll" data-target="chartContainer" data-offset="50">
 <div id="chartContainer" style="height: 500px; width: 100%;object-fit: contain;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<hr>
 {% if flag %}
-<p>The tree height exceeds the threshold</p>
+<h5>The tree height exceeds the threshold</h5>
 {% else %}
-<p>The tree height is in threshold</p>
+<h4>The tree height is in threshold</h4>
 {% endif%}
+{% if tree %}
+    {% for i in tree %}
+    <br>
+    <h5>The tree will reach the wire in {{i}} years</h5>
+    <br>
+    {% endfor %}
+
+{% else %}
+<h5>There is no tree in the near future that will reach the wire</h5>
+{% endif %}
 </body>
 </html>

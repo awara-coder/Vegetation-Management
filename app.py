@@ -39,7 +39,7 @@ for frame in frames:
     cv2.imshow('vegetation', vegetationMask)
     cv2.waitKey(1)
     # sleep(0.0001)
-    # sleep(0.03)
+    # sleep(100)
 
 cv2.destroyAllWindows()
 
