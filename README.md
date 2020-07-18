@@ -1,5 +1,7 @@
 # Vegetation Management
 
+This project contains the code for the solution to prevent forest fire by detecting the potential locations at which the trees are dangerously close to the high tension wires by analysing the video captured by the drone.
+
 ## Problem Statement
 - Maintaining appropriate distance of tree-tops from high voltage wires.
 - To ensure safe, reliable and economical electric service.
